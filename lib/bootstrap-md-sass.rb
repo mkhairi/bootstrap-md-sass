@@ -1,6 +1,6 @@
 require "bootstrap-md-sass/version"
 
-module Boostrap
+module Bootstrap
   module Md
     module Sass
       class << self
