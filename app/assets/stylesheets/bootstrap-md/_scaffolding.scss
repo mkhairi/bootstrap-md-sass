@@ -1,0 +1,199 @@
+
+.content-container {
+
+	margin-left: 0;
+	@include transition(margin-left 0.4s ease-in-out);
+
+	body.no-transition &{
+		@include transition(none);
+	}
+
+}
+
+body {
+	color: get-color(grey, 800);
+	font-family: 'Roboto', sans-serif;
+}
+
+body.noscroll {
+	overflow: hidden;
+}
+
+p {
+	color: get-color(grey, 800);
+	letter-spacing: .1px;
+	-webkit-font-smoothing: antialiased;
+	font-family: "RobotoDraft", "Roboto", sans-serif;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+.well {
+	background-color: get-color(grey, 100);
+}
+
+a {
+	color: get-color(light-blue, 400);
+}
+
+a:hover {
+	color: get-color(light-blue, 700);
+}
+
+a.no-decoration:hover {
+	text-decoration: none;
+}
+
+.dropdown-menu {
+
+	padding: 8px 0;
+	top: -10px;
+	left: 0;
+
+	> li > a {
+
+		padding: 10px 0 10px 16px;
+
+	}
+
+}
+
+.dropdown-menu a {
+	margin-right: 0 !important;
+}
+
+.ruled {
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: get-color(grey, 300);
+}
+
+.border-top {
+	border-top: 1px solid get-color(grey, 300);
+}
+
+.border-right {
+	border-right: 1px solid get-color(grey, 300);
+}
+
+.border-bottom {
+	border-bottom: 1px solid get-color(grey, 300);
+}
+
+.border-left {
+	border-left: 1px solid get-color(grey, 300);
+}
+
+.breather {
+	height: 15px;
+	display: block;
+	clear: both;
+}
+
+.breather-lg {
+	height: 60px;
+	clear: both;
+}
+
+div.modal-backdrop.fade.in {
+	height: 100%;
+	position: fixed;
+	opacity: 0.6;
+	background-color: #000;
+	z-index: 1039 !important;
+}
+
+.modal {
+	border-radius: $border-radius-base;
+}
+
+
+
+
+
+
+
+
+code {
+	font-size: 10px;
+	border-radius: 2px;
+	background-color: get-color(grey, 200);
+	color: get-color(teal, 400);
+}
+
+pre {
+	font-size: 10px;
+	padding: 15px;
+	margin: 0;
+	border-radius: 2px;
+	background-color: get-color(grey, 100);
+	border-radius: 2px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border: none;
+	color: get-color(pink, 300);
+}
+
+.example {
+
+	margin-bottom: 30px;
+
+	& .example-code {
+		padding: 15px;
+		background-color: get-color(grey, 100);
+		& pre {
+			background-color: transparent;
+		}
+		&::before {
+			content: "Code";
+			opacity: 0.4;
+			display: block;
+			text-align: right;
+			letter-spacing: 0.5em;
+			text-transform: uppercase;
+			color: get-color(grey, 400);
+		}
+	}
+
+	& .example-output {
+		padding: 30px;
+		border-radius: 2px;
+		background-color: $color-white;
+		border: 10px solid get-color(grey, 100);
+		&::before {
+			content: "Output";
+			opacity: 0.4;
+			right: -25px;
+			top: -25px;
+			display: block;
+			position: relative;
+			text-align: right;
+			letter-spacing: 0.5em;
+			text-transform: uppercase;
+			color: get-color(grey, 400);
+		}
+	}
+
+	&.example-right {
+
+		@include clearfix();
+
+		.example-code {
+			float: left;
+			width: 50%;
+		}
+
+		.example-output {
+			float: right;
+			width: 50%;
+		}
+
+	}
+
+}
+
+

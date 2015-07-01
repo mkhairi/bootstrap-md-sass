@@ -1,0 +1,58 @@
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+.icon {
+
+	font-size: 20px;
+
+	&.icon-sm {
+		font-size: 16px;
+	}
+
+	&.icon-md {
+		font-size: 20px;
+	}
+
+	&.icon-lg {
+		font-size: 24px;
+	}
+
+	&.icon-xl {
+		font-size: 36px;
+	}
+
+	&.icon-xxl {
+		font-size: 48px;
+	}
+
+	&.icon-light {
+		color: rgba(255, 255, 255, 1);
+	}
+
+	&.icon-inactive {
+		color: rgba(0, 0, 0, 0.3);
+	}
+
+	&.icon-circle {
+		color: #FFF;
+		background-color: get-color(grey, 300);
+		border-radius: 50%;
+		padding: 10px;
+	}
+
+}
+
+
+
+a.btn-bg-danger .icon {
+	color: #cf3f41;
+}
+
+a.btn-bg-primary .icon {
+	color: #3576be;
+}
+
+a.btn-bg-success .icon {
+	color: #4dae4a;
+}

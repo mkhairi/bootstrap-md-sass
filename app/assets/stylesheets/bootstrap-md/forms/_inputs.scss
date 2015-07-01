@@ -1,0 +1,253 @@
+
+.form-control {
+	border-radius: 0;
+	background-color: rgba(0,0,0,0);
+	box-shadow: none;
+	border: none;
+	border-bottom: 2px solid get-color(grey, 300);
+	padding-left: 0;
+	padding-right: 0;
+	@include placeholder(get-color(grey, 400));
+}
+
+.form-control:focus {
+	outline: 0;
+	border-bottom: 2px solid get-color(light-blue, 500);
+	box-shadow: none;
+	@include placeholder(get-color(light-blue, 500));
+}
+
+.form-control:focus::-webkit-input-placeholder {
+	transition: color ease-in-out 0.3s; 
+}
+
+.form-control::-webkit-input-placeholder {
+	transition: color ease-in-out 0.4s; 
+}
+
+.help-block {
+	color: get-color(grey, 400);
+}
+
+textarea.autosize {
+	resize: none;
+}
+
+.form-group {
+	position: relative;
+}
+
+.full-width {
+
+	.form-control {
+
+		padding: 14px;
+		border-bottom: none;
+
+	}
+
+	.form-control:focus {
+
+		@include placeholder(get-color(grey, 400));
+		border-bottom: none;
+
+	}
+
+}
+
+
+
+/* Material input */
+
+.material {
+
+	&.focussed {
+
+		&.with-icon {
+
+			.icon {
+				color: get-color(light-blue);
+			}
+
+		}
+
+		label {
+			color: get-color(light-blue) !important;
+		}
+
+	}
+
+	.chars-remaining {
+		margin-top: -10px;
+	}
+
+	&.full-width {
+
+		.chars-remaining {
+			margin-top: -30px;
+		}
+
+		input[type="text"].character-count {
+			padding-right: 70px;
+		}
+
+		textarea.character-count {
+			margin-bottom: 10px;
+			margin-top: -10px;
+		}
+
+	}
+
+	&.count-low {
+
+		.material-input label {
+			color: get-color(orange, 500) !important;
+		}
+
+		.form-control {
+			border-color: get-color(orange, 500);
+		}
+
+		.chars-remaining {
+			color: get-color(orange, 500) !important;
+		}
+
+	}
+
+	&.error {
+
+		.material-input label {
+			color: get-color(red, 700) !important;
+		}
+
+		.form-control {
+			border-color: get-color(red, 700);
+		}
+
+		.chars-remaining {
+			color: get-color(red, 700) !important;
+		}
+
+	}
+
+	&.with-icon {
+
+		@include clearfix();
+
+		&.count-low {
+
+			.icon {
+				color: get-color(amber, 700) !important;
+			}
+
+		}
+
+		&.error {
+
+			.icon {
+				color: get-color(red, 700) !important;
+			}
+
+		}
+
+		.icon {
+
+			float: left;
+			width: 30px;
+			margin-top: 24px;
+			color: get-color(grey, 500);
+
+			&.icon-right {
+				text-align: right;
+				float: right;
+			}
+
+		}
+
+		.material-input {
+			float: left;
+			width: calc(100% - 30px);
+		}
+
+	}
+
+	.chars-remaining {
+
+		color: get-color(grey, 400);
+		position: relative;
+		top: 0px;
+		right: 0px;
+		float: right;
+		width: 60px;
+
+		> span {
+
+			position: relative;
+			right: 0px;
+			top: 0;
+			float: right;
+
+		}
+		
+	}
+
+	.material-input {
+
+		position: relative;
+		padding-top: 18px;
+		margin-bottom: 10px;
+		@include clearfix();
+
+		label {
+			pointer-events: none;
+		}
+
+	}
+	
+	.material-input:after {
+		display: block;
+		clear: both;
+		content: "";
+	}
+	
+	.material-input input, 
+	.material-input textarea {
+		width: 100%;
+		outline: none;
+		background: 0;
+		float: left;
+	}
+	
+	
+	.material-input label:not(.error) {
+		font-weight: normal;
+		line-height: 32px;
+	}
+	
+	.material-input label:not(.error) {
+		color: get-color(grey, 400);
+		position: absolute;
+		left: 0;
+		top: 18px;
+	}
+	
+	.material-input :focus ~ label:not(.error),
+	.material-input .filled ~ label:not(.error),
+	.error:focus ~ label:not(.error) {
+		color: get-color(grey, 400);
+		font-size: 12px;
+		top: 0;
+		line-height: 24px;
+	}
+	
+	
+	/* Animation */
+	.material-bar:before, 
+	.material-bar:after,
+	.material-input label:not(.error) {
+		transition: .2s ease all; 
+		-moz-transition: .2s ease all; 
+		-webkit-transition: .2s ease all;
+	}
+
+}

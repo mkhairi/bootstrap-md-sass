@@ -1,0 +1,208 @@
+
+.btn-xl {
+  @include button-size($padding-extra-large-horizontal, $padding-extra-large-horizontal, $font-size-extra-large, $line-height-extra-large, $border-radius-extra-large);
+}
+
+.btn-xxl {
+  @include button-size($padding-extra-extra-large-horizontal, $padding-extra-extra-large-horizontal, $font-size-extra-extra-large, $line-height-extra-extra-large, $border-radius-extra-extra-large);
+}
+
+
+
+@mixin inverted-button-variant($color, $background, $alt) {
+  color: $color;
+  background-color: $background;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $alt;
+    background-color: darken($background, 10%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $background;
+    }
+  }
+
+  .badge {
+    color: $alt;
+    background-color: $color;
+  }
+}
+
+
+
+
+
+.btn {
+
+	border: none;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+
+	&.btn-no-style,
+	&.btn-no-style:hover, {
+		background: none;
+		border: none;
+		box-shadow: none !important;
+	}
+
+	&.btn-fab {
+
+		border-radius: 50%;
+		margin: 0;
+		padding: 0;
+		font-size: 20px;
+		color: $color-white;
+		
+		width: 36px;
+		height: 36px;
+
+		& > .icon {
+			margin: 0 !important;
+			margin-left: -1px !important;
+		}
+
+		&.btn-xs {
+			width: $padding-small-horizontal * 3;
+			height: $padding-small-horizontal * 3;
+			padding-top: $padding-small-horizontal / 4;
+			& > .icon {
+				font-size: $padding-small-horizontal * 2;
+			}
+		}
+		
+		&.btn-sm {
+			width: $padding-small-horizontal * 4;
+			height: $padding-small-horizontal * 4;
+			padding-top: $padding-small-horizontal / 2;
+			& > .icon {
+				font-size: $padding-small-horizontal * 3;
+			}
+		}
+
+		&.btn-md {
+			width: $padding-base-horizontal * 5;
+			height: $padding-base-horizontal * 5;
+			padding-top: $padding-base-horizontal;
+			& > .icon {
+				font-size: $padding-base-horizontal * 3;
+			}
+		}
+		
+		&.btn-lg {
+			width: $padding-large-horizontal * 4;
+			height: $padding-large-horizontal * 4;
+			padding-top: $padding-large-horizontal / 2;
+			& > .icon {
+				font-size: $padding-large-horizontal * 3;
+			}
+		}
+
+		&.btn-xl {
+			width: $padding-extra-large-horizontal * 4;
+			height: $padding-extra-large-horizontal * 4;
+			padding-top: $padding-extra-large-horizontal / 2;
+			& > .icon {
+				font-size: $padding-extra-large-horizontal * 3;
+			}
+		}
+
+		&.btn-xxl {
+			width: $padding-extra-extra-large-horizontal * 4;
+			height: $padding-extra-extra-large-horizontal * 4;
+			padding-top: $padding-extra-extra-large-horizontal / 2;
+			& > .icon {
+				font-size: $padding-extra-extra-large-horizontal * 3;
+			}
+		}
+
+		.app-bar &{
+			margin-top: -24px;
+		}
+
+	}
+	
+	&:hover {
+		box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+	}
+
+	.inner {
+		background: rgb(100,100,100);
+		height: 50px;
+		width: 50px;
+		margin: -25px 0 0 -25px;
+		position: absolute;
+		display: block;
+		border-radius: 50%;
+		opacity: 0;
+		vertical-align: middle;
+	}
+
+	.overlay {
+		background: rgba(200,200,200,0);
+		height: 120%;
+		width: 120%;
+		position: absolute;
+		display: table;
+	}
+
+}
+
+.btn-inverted {
+	background-color: rgba(0,0,0,0);
+	color: $btn-default-color;
+	&:hover,
+	&:focus,
+	&.focus {
+		background: none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled],
+	&:active,
+	&.active {
+		box-shadow: none;
+	}
+}
+
+.btn-inverted.btn-default {
+	@include inverted-button-variant($btn-default-color, rgba(0,0,0,0), $btn-default-alt);
+}
+
+.btn-inverted.btn-primary {
+	@include inverted-button-variant($btn-primary-bg, rgba(0,0,0,0), $btn-primary-alt);
+}
+
+.btn-inverted.btn-success {
+	@include inverted-button-variant($btn-success-bg, rgba(0,0,0,0), $btn-success-alt);
+}
+
+.btn-inverted.btn-info {
+	@include inverted-button-variant($btn-info-bg, rgba(0,0,0,0), $btn-info-alt);
+}
+
+.btn-inverted.btn-warning {
+	@include inverted-button-variant($btn-warning-bg, rgba(0,0,0,0), $btn-warning-alt);
+}
+
+.btn-inverted.btn-danger {
+	@include inverted-button-variant($btn-danger-bg, rgba(0,0,0,0), $btn-danger-alt);
+}
