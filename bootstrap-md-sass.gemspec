@@ -5,7 +5,7 @@ require 'bootstrap-md-sass/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "bootstrap-md-sass"
-  spec.version       = BootstrapMd::Sass::VERSION
+  spec.version       = Bootstrap::Md::Sass::VERSION
   spec.authors       = ["mkhairi"]
   spec.email         = ["khairi@labs.my"]
   spec.summary       = %q{}
