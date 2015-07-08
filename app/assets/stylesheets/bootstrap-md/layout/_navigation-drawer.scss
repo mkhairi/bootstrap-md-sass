@@ -132,8 +132,28 @@ $navigation-drawer-font-weight: 500;
 			color: $link-color;
 			font-weight: normal;
 			background-color: $link-bg;
+
+			@include transition(background-color 0.25s ease-in-out);
+
 			i {
 				color: $icon-color;
+				float: right;
+				margin-top: -8px;
+				padding: 10px;
+				padding-right: 20px;
+				opacity: 0.3;
+			}
+		}
+
+		li.clicked > a {
+			@include transition(background-color 0.25s ease-in-out);
+		}
+
+		li.active > a {
+			i {
+				font-size: 16px !important;
+				padding-right: 21px !important;
+				opacity: 0.5;
 			}
 		}
 
@@ -205,6 +225,7 @@ $navigation-drawer-font-weight: 500;
 	background: #000;
 	@include transition(visibility 0 linear .4s,opacity .4s ease-in-out);
 	@include transition(translateZ(0));
+	@include transition(opacity 0.5s ease-in-out);
 
 	&.active {
 		opacity: 0.5;
@@ -212,6 +233,7 @@ $navigation-drawer-font-weight: 500;
 		-webkit-transition-delay: 0;
 		-moz-transition-delay: 0;
 		transition-delay: 0;
+		@include transition(opacity 0.5s ease-in-out);
 	}
 
 }
