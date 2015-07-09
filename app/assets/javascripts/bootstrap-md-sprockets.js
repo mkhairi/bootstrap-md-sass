@@ -1,3 +1,9 @@
+//=require ./components/jquery.validate
+//=require ./components/additional-methods
+//=require ./components/velocity
+//=require ./components/velocity.ui
+//=require ./components/autosize
+//=require ./components/slick
 //=require ./bootstrap-md/ramjet
 //=require ./bootstrap-md/button-ripple
 //=require ./bootstrap-md/material-form
