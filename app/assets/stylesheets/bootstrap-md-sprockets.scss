@@ -13,7 +13,7 @@
 	}
 }
 
-$material-font-path: "../fonts/material" !default;
+$material-font-path: "material" !default;
 
 @import "mixins";
 @import "bootstrap-md/fonts";
