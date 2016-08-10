@@ -1,4 +1,18 @@
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+$mdicon-font-path: "material/" !default;
+$mdicon-font-name: "MaterialIcons-Regular" !default;
+$mdicon-font-weight: 400 !default;
+
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: $mdicon-font-weight;
+	src: font-url("#{$mdicon-font-path}");
+	src: local('Material Icons'),
+	     local('MaterialIcons-Regular'),
+	     font-url("#{$mdicon-font-path}#{$mdicon-font-name}.woff2") format("woff2"),
+	     font-url("#{$mdicon-font-path}#{$mdicon-font-name}.woff") format("woff"),
+	     font-url("#{$mdicon-font-path}#{$mdicon-font-name}.ttf") format("truetype"),
+}
 
 .icon {
 
