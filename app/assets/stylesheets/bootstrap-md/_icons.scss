@@ -1,9 +1,10 @@
 $mdicon-font-path: "material/" !default;
 $mdicon-font-name: "MaterialIcons-Regular" !default;
+$mdicon-font-family: 'Material Icons' !default;
 $mdicon-font-weight: 400 !default;
 
 @font-face {
-	font-family: 'Material Icons';
+	font-family: "#{$mdicon-font-path}";
 	font-style: normal;
 	font-weight: $mdicon-font-weight;
 	src: font-url("#{$mdicon-font-path}");
