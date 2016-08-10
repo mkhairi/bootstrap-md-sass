@@ -4,7 +4,7 @@ $mdicon-font-family: 'Material Icons' !default;
 $mdicon-font-weight: 400 !default;
 
 @font-face {
-	font-family: "#{$mdicon-font-path}";
+	font-family: "#{$mdicon-font-family}";
 	font-style: normal;
 	font-weight: $mdicon-font-weight;
 	src: font-url("#{$mdicon-font-path}");
@@ -17,7 +17,7 @@ $mdicon-font-weight: 400 !default;
 
 .material-icons {
 	display: inline-block;
-	font-family: 'Material Icons';
+	font-family: "#{$mdicon-font-family}";
 	font-feature-settings: 'liga';
 	font-size: inherit;
 	font-style: normal;
