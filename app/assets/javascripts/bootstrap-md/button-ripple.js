@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+$(document).on('ready turbolinks:load', function() {
 
 	$.Velocity.RegisterUI("callout.touched", {
 		defaultDuration: 500,

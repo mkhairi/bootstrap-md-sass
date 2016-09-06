@@ -25,7 +25,7 @@
 		return this;
 	}
 
-	$(document).ready(function() {
+	$(document).on('ready turbolinks:load', function() {
 
 		var overlay = $('.app-bar-overlay');
 

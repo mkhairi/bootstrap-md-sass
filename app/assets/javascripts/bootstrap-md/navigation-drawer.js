@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+$(document).on('ready turbolinks:load', function() {
 
 	var overlay = $('.navigation-drawer-overlay');
 

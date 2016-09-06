@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+$(document).on('ready turbolinks:load', function() {
 
 	var bodyPaddingTop = 60;
 	var $appBar = $('nav.app-bar');
