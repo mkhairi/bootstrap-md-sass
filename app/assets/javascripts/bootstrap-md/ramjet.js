@@ -491,7 +491,7 @@ function convertIfJqueryObject(node) {
 
 }));
 
-$(document).on('ready turbolinks:load', function() {
+$(document).on('turbolinks:load', function() {
 
 	$('.morph-target').each(function() {
 		ramjet.hide($(this));

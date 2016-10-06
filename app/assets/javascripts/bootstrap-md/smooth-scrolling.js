@@ -1,7 +1,7 @@
 
 //	smooth scrolling from http://css-tricks.com/snippets/jquery/smooth-scrolling/
 
-$(document).on('ready turbolinks:load', function() {
+$(document).on('turbolinks:load', function() {
 
 	$(function() {
 

@@ -1,5 +1,5 @@
 
-$(document).on('ready turbolinks:load', function() {
+$(document).on('turbolinks:load', function() {
 
 	$('.empty-state').each(function() {
 		el = $(this);

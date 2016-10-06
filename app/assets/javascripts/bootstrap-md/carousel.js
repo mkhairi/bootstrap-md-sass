@@ -1,5 +1,5 @@
 
-$(document).on('ready turbolinks:load', function() {
+$(document).on('turbolinks:load', function() {
 
 	$('.your-class').slick({
 
